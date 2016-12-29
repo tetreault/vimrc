@@ -94,4 +94,4 @@ vnoremap ; :
 
 " Finally the color scheme. Choose whichever you want from the list in the
 " " link above (back up where we included the bundle of a ton of themes.)
-" colorscheme autumnleaf
+colorscheme autumnleaf
