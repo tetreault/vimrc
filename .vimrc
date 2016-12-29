@@ -28,7 +28,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " Color schemes
-Plugin 'flazz/vim-colorschemes'
+Plugin 'tetreault/vim-colorschemes'
 
 " Fuzzy Finder
 Plugin 'kien/ctrlp.vim'
@@ -66,6 +66,7 @@ set shiftround  " tab / shifting moves to closest tabstop.
 set autoindent  " Match indents on new lines.
 set smartindent " Intellegently dedent / indent new lines based on rules.
 set noswapfile
+set number
 
 " Don't ask about file changing on disk before loading it
 set autoread
@@ -94,4 +95,4 @@ vnoremap ; :
 
 " Finally the color scheme. Choose whichever you want from the list in the
 " " link above (back up where we included the bundle of a ton of themes.)
-colorscheme autumnleaf
+colorscheme far
