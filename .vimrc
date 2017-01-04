@@ -71,6 +71,8 @@ set number
 " Don't ask about file changing on disk before loading it
 set autoread
 
+" Set clipboard
+set clipboard=unnamed
 " Better search 
 set ignorecase
 set smartcase
