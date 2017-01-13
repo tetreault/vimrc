@@ -5,21 +5,6 @@ filetype off                  " required
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
-Plugin 'tpope/vim-fugitive'
-filetype off                  " required
-
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 " PLUGINS BEGIN
@@ -27,26 +12,41 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
+" Git Plugin
+" github.com/tpope/vim-fugitive
+Plugin 'tpope/vim-fugitive'
+
 " Color schemes
+" github.com/tetreault/vim-colorschemes
 Plugin 'tetreault/vim-colorschemes'
 
 " Fuzzy Finder
+" github.com/kien/ctrlp.vim
 Plugin 'kien/ctrlp.vim'
 
 " Toggle comments
+" github.com/tpope/vim-commentary
 Plugin 'tpope/vim-commentary'
 
 " JSON support 
+" github.com/leshill/vim-json
 Plugin 'leshill/vim-json'
 
 " (Better) Javascript syntax and indentation support 
+" github.com/pangloss/vim-javascript
 Plugin 'pangloss/vim-javascript'
 
 " HTML Indentation
+" github.com/vim-scripts/indenthtml.vim
 Plugin 'vim-scripts/indenthtml.vim'
 
 " Markdown syntax support
+" github.com/tpope/vim-markdown
 Plugin 'tpope/vim-markdown'
+
+" Indentation Visual Aid
+" github.com/nathanaelkane/vim-indent-guides
+Plugin 'nathanaelkane/vim-indent-guides'
 
 " PLUGINS END
 """""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -54,6 +54,7 @@ Plugin 'tpope/vim-markdown'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
+
 filetype plugin indent on    " Filetype autodetection
 syntax on                    " Syntax highlighting
 
@@ -73,6 +74,7 @@ set autoread
 
 " Set clipboard
 set clipboard=unnamed
+
 " Better search 
 set ignorecase
 set smartcase
@@ -91,10 +93,8 @@ nnoremap ; :
 vnoremap ; :
 
 " So we don't have to reach for escape to leave insert mode.
-" inoremap jf <esc>
+inoremap jf <esc>
 
-
-
-" Finally the color scheme. Choose whichever you want from the list in the
-" " link above (back up where we included the bundle of a ton of themes.)
+" Pick your colorscheme (list at tetreault/vim-colorschemes)
 colorscheme far
+
