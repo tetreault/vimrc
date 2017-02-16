@@ -99,4 +99,4 @@ let mapleader = ","
 let g:cssColorVimDoNotMessMyUpdatetime = 1
 
 " " Pick your colorscheme (list at tetreault/vim-colorschemes)
-colorscheme far
+colorscheme elflord 
