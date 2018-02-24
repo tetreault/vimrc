@@ -51,6 +51,9 @@ Plugin 'tpope/vim-markdown'
 " " github.com/nathanaelkane/vim-indent-guides
 Plugin 'nathanaelkane/vim-indent-guides'
 
+" " Vue syntax highlighting
+Plugin 'posva/vim-vue'
+
 " " PLUGINS END
 " """""""""""""""""""""""""""""""""""""""""""""""""""""
 
