@@ -101,5 +101,8 @@ let mapleader = ","
 " " vim-css-color config
 let g:cssColorVimDoNotMessMyUpdatetime = 1
 
+" vue syntax highlighting tweak
+let g:vue_disable_pre_processors = 1
+
 " " Pick your colorscheme (list at tetreault/vim-colorschemes)
 colorscheme kolor
