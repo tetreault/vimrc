@@ -3,67 +3,74 @@ filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
+
+
 call vundle#begin()
 
-" """""""""""""""""""""""""""""""""""""""""""""""""""""
-" " PLUGINS BEGIN
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
+" PLUGINS BEGIN
 
-" " let Vundle manage Vundle, required
+" let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-" " Git Plugin
-" " github.com/tpope/vim-fugitive
+" Git Plugin
+" github.com/tpope/vim-fugitive
 Plugin 'tpope/vim-fugitive'
 
-" " Color schemes
-" " github.com/tetreault/vim-colorschemes
+" Color schemes
+" github.com/tetreault/vim-colorschemes
 Plugin 'tetreault/vim-colorschemes'
 
-" " CSS Live Color Preview
-" " github.com/tetreault/vim-css-color
+" CSS Live Color Preview
+" github.com/tetreault/vim-css-color
 Plugin 'tetreault/vim-css-color'
 
-" " Fuzzy Finder
-" " github.com/kien/ctrlp.vim
+" Fuzzy Finder
+" github.com/kien/ctrlp.vim
 Plugin 'kien/ctrlp.vim'
 
-" " Toggle comments
-" " github.com/tpope/vim-commentary
+" Toggle comments
+" github.com/tpope/vim-commentary
 Plugin 'tpope/vim-commentary'
 
-" " JSON support
-" " github.com/leshill/vim-json
+" JSON support
+" github.com/leshill/vim-json
 Plugin 'leshill/vim-json'
 
-" " (Better) Javascript syntax and indentation support
-" " github.com/pangloss/vim-javascript
+" (Better) Javascript syntax and indentation support
+" github.com/pangloss/vim-javascript
 Plugin 'pangloss/vim-javascript'
 
-" " HTML Indentation
-" " github.com/vim-scripts/indenthtml.vim
+" HTML Indentation
+" github.com/vim-scripts/indenthtml.vim
 Plugin 'vim-scripts/indenthtml.vim'
 
-" " Markdown syntax support
-" " github.com/tpope/vim-markdown
+" Markdown syntax support
+" github.com/tpope/vim-markdown
 Plugin 'tpope/vim-markdown'
 
-" " Indentation Visual Aid
-" " github.com/nathanaelkane/vim-indent-guides
-Plugin 'nathanaelkane/vim-indent-guides'
-
-" " Vue syntax highlighting
+" Vue syntax highlighting
 Plugin 'posva/vim-vue'
 
-" " PLUGINS END
-" """""""""""""""""""""""""""""""""""""""""""""""""""""
+" Indentation Visual Aid
+" github.com/nathanaelkane/vim-indent-guides
+Plugin 'nathanaelkane/vim-indent-guides'
+
+" Ale
+"https://github.com/w0rp/ale
+Plugin 'w0rp/ale'
+
+" PLUGINS END
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
-" " All of your Plugins must be added before the following line
+" All of your Plugins must be added before the following line
 call vundle#end()            " required
 
 " filetype plugin indent on    " Filetype autodetection
 syntax on                    " Syntax highlighting
 
+set scrolloff=8            " keep 8 lines of space above and below the cursor
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
@@ -76,33 +83,37 @@ set noswapfile
 set number
 set t_Co=256    " terminal colors
 
-" " Don't ask about file changing on disk before loading it
+" Don't ask about file changing on disk before loading it
 set autoread
 
-" " Set clipboard
+" Set clipboard
 set clipboard=unnamed
 
-" " Better search
+" Better search
 set ignorecase
 set smartcase
 set incsearch
 set showmatch
 set hlsearch
 
-" " Fix obnoxious delete behavior
+" Fix obnoxious delete behavior
 set backspace=indent,eol,start
 
-" " Allow cursor to go anywhere in visual block mode
+" Allow cursor to go anywhere in visual block mode
 set virtualedit+=block
 
-" " Leader is a key allowing you to have your own namespace of keybindings
+" Leader is a key allowing you to have your own namespace of keybindings
 let mapleader = ","
 
-" " vim-css-color config
+" vim-css-color config
 let g:cssColorVimDoNotMessMyUpdatetime = 1
 
 " vue syntax highlighting tweak
 let g:vue_disable_pre_processors = 1
 
-" " Pick your colorscheme (list at tetreault/vim-colorschemes)
-colorscheme kolor
+let g:netrw_browse_split = 2
+
+let g:netrw_winsize = 20
+
+" Pick your colorscheme (list at tetreault/vim-colorschemes)
+colorscheme molokai
